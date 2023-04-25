@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+mat-sidenav-container,
+mat-sidenav {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+mat-sidenav {
+  width: 70%;
+}
+
+mat-sidenav {
+  // background: radial-gradient(ellipse, #c55d29, #4b1c0d);
+}
+
+mat-sidenav-content {
+  // background-color: #EAD9CD;
+}
+// .mat-sidenav-container { background-color: #f2f2f2; }
+
+
+// back drop värin muutos
+mat-sidenav-container {
+  ::ng-deep {
+      .mat-drawer-backdrop.mat-drawer-shown {
+        background-color: rgba(0, 0, 0, 0.8) !important;
+      }
+  }
+}

@@ -1,0 +1,52 @@
+@mixin basic-button {
+  border: none;
+  padding: 10px 25px;
+  border-radius: 55px !important;
+  cursor: pointer;
+}
+
+@mixin light-blue-button {
+  @include basic-button;
+  background-color: var(--primary-light-blue) !important;
+  color: #181818 !important;
+}
+
+@mixin white-button {
+  @include basic-button;
+  background: white;
+  color: black;
+}
+
+@mixin light-outlined-button {
+  @include white-button;
+  border: 2px solid var(--primary-light-blue);
+}
+
+@mixin dark-blue-button {
+  @include basic-button;
+  background-color: var(--primary-dark-blue);
+  color: var(--secondary-light-blue);
+}
+
+@mixin light-border-dark-button {
+  @include dark-blue-button;
+  border: 1px solid var(--primary-light-blue);
+  text-align: left;
+}
+
+@mixin transparent-button {
+  @include basic-button;
+  background-color: transparent;
+  color: white;
+  border: 1px solid var(--white);
+}
+
+@mixin transparent-button-with-white-text {
+  @include transparent-button;
+  border: 1px solid var(--primary-light-blue);
+}
+@mixin transparent-button-with-light-blue-text {
+  @include transparent-button;
+  color: var(--primary-light-blue) !important;
+  border: 1px solid var(--primary-light-blue);
+}

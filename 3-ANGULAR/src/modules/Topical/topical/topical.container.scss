@@ -1,0 +1,24 @@
+.first-article {
+  background-image: url("../../assets/images/Kuva07-scaled.jpg");
+  // crop picture from the center
+  background-position: center;
+  // fill image in the viewport
+  background-size: cover;
+
+  height: 200px;
+}
+
+.carage-info {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../../assets/images/Kuva07-scaled.jpg");
+  // crop picture from the center
+  background-position: center;
+  // fill image in the viewport
+  background-size: cover;
+
+  //   height: 525px;
+}

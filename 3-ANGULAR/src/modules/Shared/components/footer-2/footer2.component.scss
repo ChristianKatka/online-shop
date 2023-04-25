@@ -1,0 +1,31 @@
+@use "../../../../styles/variables/" as *;
+
+mat-divider {
+  border-top-color: var(--primary-color);
+}
+
+section {
+  background: linear-gradient(
+    180deg,
+    rgb(40, 40, 40) 0%,
+    rgb(25, 25, 25) 35%,
+    rgb(10, 10, 10) 100%
+  );
+}
+
+h1 {
+  font-family: "Castoro Titling", cursive;
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.wrapper {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+}

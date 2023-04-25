@@ -1,0 +1,45 @@
+<!-- <main class="flex-column align-center-center" [style.width]="'100%'">
+  <app-logo style="margin-top: 100px; margin-bottom: 50px"></app-logo>
+  <section [style.width]="'95%'">
+    <a (click)="closeSidenav.emit()" routerLink="/etusivu">Etusivu</a>
+    <a (click)="closeSidenav.emit()" routerLink="/palvelut">Palvelut</a>
+    <a (click)="closeSidenav.emit()" routerLink="/ajankohtaista"
+      >Ajankohtaista</a
+    >
+    <a (click)="closeSidenav.emit()" routerLink="/yritys">Yritys</a>
+    <a (click)="closeSidenav.emit()" routerLink="/yhteystiedot">Yhteystiedot</a>
+  </section>
+</main> -->
+
+<main>
+  <section
+    class="flex-row space-between-center"
+    style="background-color: beige"
+  >
+    <app-logo></app-logo>
+    <button mat-icon-button>
+      <mat-icon>close</mat-icon>
+    </button>
+  </section>
+
+  <section style="width: 100%">
+    <div class="flex-row space-between-center">
+      <span>Tietokoneet</span>
+      <button mat-icon-button>
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </button>
+    </div>
+    <div class="flex-row space-between-center">
+      <span>Laitteet</span>
+      <button mat-icon-button>
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </button>
+    </div>
+    <div class="flex-row space-between-center">
+      <span>Muut</span>
+      <button mat-icon-button>
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </button>
+    </div>
+  </section>
+</main>
