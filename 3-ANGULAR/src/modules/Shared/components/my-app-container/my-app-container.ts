@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
 })
 export class MyAppContainerComponent {
   @Input()
-  width = '100%';
+  width = '90%';
 }

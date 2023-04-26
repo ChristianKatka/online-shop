@@ -4,10 +4,12 @@ import { ShopItemsActions } from '../actions';
 
 export interface ShopItemsState {
   entities: { [id: string]: any };
+  shoppingCartItems: { [id: string]: any };
 }
 
 export const initialState: ShopItemsState = {
   entities: {},
+  shoppingCartItems: {},
 };
 
 const shopItemsReducer = createReducer(
@@ -17,6 +19,16 @@ const shopItemsReducer = createReducer(
     return {
       ...state,
       entities,
+    };
+  }),
+  on(ShopItemsActions.addItemToShoppingCart, (state, { selectedShopItem }) => {
+    const shoppingCartItems = {
+      ...state.shoppingCartItems,
+      [selectedShopItem.id]: selectedShopItem,
+    };
+    return {
+      ...state,
+      shoppingCartItems,
     };
   })
 

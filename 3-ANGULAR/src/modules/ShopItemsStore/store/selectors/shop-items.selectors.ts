@@ -8,6 +8,18 @@ export const shopItemsState = createSelector(
 export const getShopItemsControlData = createSelector(
   shopItemsState,
   (state) => {
-    return { shopItemEntities: Object.values(state.entities) };
+    const firstTwentyItems = Object.values(state.entities).slice(0, 20);
+    return {
+      shopItemEntities: firstTwentyItems,
+      shoppingCartItems: Object.values(state.shoppingCartItems),
+    };
   }
+);
+
+export const getAmountOfShoppingCartItems = createSelector(
+  shopItemsState,
+  (state) =>
+    Object.values(state.shoppingCartItems)
+      ? Object.values(state.shoppingCartItems).length
+      : 0
 );

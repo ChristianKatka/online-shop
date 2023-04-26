@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +6,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  @Output() sidenavToggle = new EventEmitter<void>();
+  @Input() amountOfShoppingCartItems = 0;
+  @Input() showBadgeOnShoppingCart = false;
 
-  constructor() {}
+  @Output() sidenavToggle = new EventEmitter<void>();
 
   onToggleSidenav() {
     this.sidenavToggle.emit();

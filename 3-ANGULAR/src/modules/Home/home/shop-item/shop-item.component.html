@@ -1,0 +1,19 @@
+<main>
+  <div class="flex-row align-space-between-center">
+    <section class="flex-row align-space-between-center">
+      <div class="flex-row"></div>
+      <img [src]="shopItem.images[0]" alt="image" />
+      <div>
+        <p>{{ shopItem.title }}</p>
+        <p>{{ shopItem.description }}</p>
+      </div>
+    </section>
+    <section>
+      <p>{{ shopItem.price }}e</p>
+      <p>varastotilanne</p>
+      <button mat-raised-button (click)="addToShoppingCart(shopItem)">
+        LISÄÄ KORIIN
+      </button>
+    </section>
+  </div>
+</main>

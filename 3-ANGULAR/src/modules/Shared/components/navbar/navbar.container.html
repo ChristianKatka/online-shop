@@ -3,7 +3,11 @@
     <app-sidenav (closeSidenav)="sidenav.close()"></app-sidenav>
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-navbar (sidenavToggle)="sidenav.toggle()"></app-navbar>
+    <app-navbar
+      [amountOfShoppingCartItems]="amountOfShoppingCartItems$ | async | onlyNumber"
+      [showBadgeOnShoppingCart]="showBadgeOnShoppingCart$ | async | onlyBoolean"
+      (sidenavToggle)="sidenav.toggle()"
+    ></app-navbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>

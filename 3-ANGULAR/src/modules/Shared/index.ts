@@ -20,6 +20,7 @@ import { AutofocusDirective } from './directives/auto-focus.directive';
 import { FileSelectDirective } from './directives/file-select.directive';
 import { BooleanPipe } from './pipes/boolean.pipe';
 import { IconPipe } from './pipes/icon-type.pipe';
+import { NumberPipe } from './pipes/number.pipe';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
 
 export const components: any[] = [
@@ -43,5 +44,5 @@ export const components: any[] = [
   Footer2Component,
   FooterQuestionsComponent,
 ];
-export const pipes = [BooleanPipe, IconPipe, TimeAgoPipe];
+export const pipes = [BooleanPipe, IconPipe, TimeAgoPipe, NumberPipe];
 export const directives = [FileSelectDirective, AutofocusDirective];

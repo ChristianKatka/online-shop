@@ -1,0 +1,5 @@
+<app-shop-item
+  *ngFor="let shopItem of shopItemEntities"
+  [shopItem]="shopItem"
+  (addItemToShoppingCart)="this.addItemToShoppingCart.emit($event)"
+></app-shop-item>

@@ -1,1 +1,9 @@
-<h1>home</h1>
+<my-app-container
+  *ngIf="(shopItemsControlData$ | async) as shopItemsControlData"
+>
+  <app-list-view-top-filter-block></app-list-view-top-filter-block>
+  <app-shop-items-list-view
+    [shopItemEntities]="shopItemsControlData.shopItemEntities"
+    (addItemToShoppingCart)="addItemToShoppingCart($event)"
+  ></app-shop-items-list-view>
+</my-app-container>
